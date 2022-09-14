@@ -4,18 +4,23 @@
   background-color: whitesmoke;
   padding: 10px;
   height: 800px;
+  display: flex;
+  justify-content:space-evenly;
 }
 
-.button-one{
-    padding-left: 20px;
-    height: 40px;
-    width: 100px;
+.button-one {
+  padding-left: 20px;
+  height: 40px;
+  width: 100px;
+  text-align: inherit;
 }
 
-.button-two{
-    padding-left: 150px;
+.button-two {
+  height: 40px;
+  width: 100px;
 }
 
-.button-three{
-    padding-left: 180px;
+.button-three {
+  height: 40px;
+  width: 100px;
 }

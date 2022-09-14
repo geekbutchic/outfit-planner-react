@@ -6,13 +6,9 @@ const Body = () => {
   const [products, setProducts] = useState(clothing);
   return (
     <div className="body">
-      <button className="button-one">Casual</button>
-      <span className="button-two">
-        <button>Formal</button>
-      </span>
-      <span className="button-three">
-        <button>Sport</button>
-      </span>
+      <div><button className="button-one">Casual</button></div>
+      <div><button className="button-two">Formal</button></div>
+     <div><button className="button-three">Sporty</button></div>
       {/* {products.clothing.map((product, index) => {
         console.log(product);
         return <li key={index}>{product.description}</li>;
