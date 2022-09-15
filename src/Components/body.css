@@ -1,26 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
 .body {
   margin: auto;
+  width: 41.2%;
+  height: 1225px;
+  outline: auto grey;
+}
+
+.block-one {
+  margin: auto;
   width: 40%;
-  background-color: whitesmoke;
-  padding: 10px;
-  height: 800px;
   display: flex;
-  justify-content:space-evenly;
+  justify-content: center;
+  padding-top: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+.block-two {
+  margin: auto;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+.button-container {
+  margin: auto;
+  width: 40%;
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-around;
 }
 
 .button-one {
-  padding-left: 20px;
-  height: 40px;
-  width: 100px;
-  text-align: inherit;
+  transition-duration: 0.4s;
+  height: 35px;
+  border-radius: 8px;
+}
+
+.button-one:hover {
+  background-color: rgb(236, 194, 156);
+  color: black;
 }
 
 .button-two {
-  height: 40px;
-  width: 100px;
+  transition-duration: 0.4s;
+  height: 35px;
+  border-radius: 8px;
+}
+
+.button-two:hover {
+  background-color: rgb(236, 194, 156);
+  color: black;
 }
 
 .button-three {
-  height: 40px;
-  width: 100px;
+  transition-duration: 0.4s;
+  height: 35px;
+  border-radius: 8px;
 }
+
+.button-three:hover {
+  background-color: rgb(236, 194, 156);
+  color: black;
+}
+
+.top {
+  margin: auto;
+  width: 40%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.top-image {
+  margin: auto;
+  width: 40%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.bottom {
+  margin: auto;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.shoes {
+  margin: auto;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
