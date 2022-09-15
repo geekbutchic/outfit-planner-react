@@ -148,6 +148,4 @@ const clothing = [
   },
 ];
 
-module.exports = {
-  clothing,
-};
+export default clothing;

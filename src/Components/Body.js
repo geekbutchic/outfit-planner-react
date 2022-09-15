@@ -3,7 +3,19 @@ import clothing from "../data";
 import "./body.css";
 
 const Body = () => {
-  const [products, setProducts] = useState(clothing);
+  const [dressCode, setDressCode] = useState("casual");
+  console.log("Products: ", setDressCode);
+
+  const findItem = (type) => {
+    const filteredItems = clothing.filter(
+      (clothingItem) =>
+        clothingItem.type === type && clothingItem.dressCode === dressCode
+    );
+    //returns random item array
+    //Math.random * either number or length gives you number between zero and one
+    //Math.floor rounds to nearest integer
+    return filteredItems[Math.floor(Math.random() * filteredItems.length)]
+  };
 
   return (
     <div className="body">
@@ -14,16 +26,23 @@ const Body = () => {
         <div className="block-two">Casual - Formal - Sporty</div>
       </div>
       <div className="button-container">
-        <button className="button-one">Casual</button>
-        <button className="button-two">Sport</button>
-        <button className="button-three">Formal</button>
+        <button className="button-one" onClick={() => setDressCode("casual")}>
+          Casual
+        </button>
+        <button className="button-two" onClick={() => setDressCode("sport")}>
+          Sport
+        </button>
+        <button className="button-three" onClick={() => setDressCode("formal")}>
+          Formal
+        </button>
       </div>
       <div className="outfit-container">
         <div>
           <h1 className="top">Top</h1>
         </div>
         <div className="top-image">
-          <img src="https://slimages.macysassets.com/is/image/MCY/products/0/optimized/19226370_fpx.tif?$browse$&wid=376&fmt=webp" alt="shirt"></img>
+          <img src={findItem('top').imageUrl} 
+          alt="shirt"></img>
         </div>
       </div>
       <div className="outfit-container-two">
@@ -31,7 +50,7 @@ const Body = () => {
           <h1 className="bottom">Bottoms</h1>
         </div>
         <div className="top-image">
-          <img src="https://slimages.macysassets.com/is/image/MCY/products/0/optimized/19226370_fpx.tif?$browse$&wid=376&fmt=webp" alt="shirt"></img>
+          <img src={findItem('bottom').imageUrl}  alt="pants"></img>
         </div>
       </div>
       <div className="outfit-container-three">
@@ -39,7 +58,7 @@ const Body = () => {
           <h1 className="shoes">Shoes</h1>
         </div>
         <div className="top-image">
-          <img src="https://slimages.macysassets.com/is/image/MCY/products/0/optimized/19226370_fpx.tif?$browse$&wid=376&fmt=webp" alt="shirt"></img>
+          <img src={findItem('shoes').imageUrl} alt="shoes"></img>
         </div>
       </div>
     </div>
